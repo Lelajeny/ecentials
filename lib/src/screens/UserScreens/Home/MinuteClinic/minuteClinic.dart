@@ -8,7 +8,7 @@ import 'package:ecentialsclone/src/Widgets/floatingAmbulance.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Chat/chat.dart';
 import 'package:ecentialsclone/src/Widgets/searchForh.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/HospitalScreens/screen2.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/Hospital2.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/Hospital2DocProfile.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/Hospital3.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/Hospital4Chat.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/lab1.dart';
@@ -24,6 +24,7 @@ import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmac
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/pharmacyDashboard3.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/pharmacyDashboard4.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/homeScreen.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/ambulance_map.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Notifications/notifications.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Store/store.dart';
 import 'package:flutter/material.dart';
@@ -112,12 +113,12 @@ class _MinuteClinicState extends State<MinuteClinic> {
       lab1(),
       pharmacy5(),
       pharmacy5(),
-      Hospital2(),
-      Hospital2(),
+      Hospital2DocProfile(),
+      Hospital2DocProfile(),
       EmptyCart(),
       EmptyCart(),
       Hospital4Chat(),
-      Hospital2(),
+      
     ];
 
     return Scaffold(

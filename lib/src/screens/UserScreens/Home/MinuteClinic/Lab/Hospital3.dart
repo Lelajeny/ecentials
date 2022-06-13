@@ -6,7 +6,7 @@ import 'package:ecentialsclone/src/Widgets/bottomNavBar.dart';
 import 'package:ecentialsclone/src/Widgets/button.dart';
 import 'package:ecentialsclone/src/Widgets/floatingAmbulance.dart';
 import 'package:ecentialsclone/src/Widgets/schedulesCard.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/Hospital2.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/Hospital2DocProfile.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/lab3.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/homeScreen.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
@@ -166,7 +166,7 @@ class _Hospital3State extends State<Hospital3> {
                            ),
                             InkWell(
                      onTap:(){
-                         Get.to(() => Hospital2());
+                         Get.to(() => Hospital2DocProfile());
                 
                       },      
                 child:   SchedulesCard(
@@ -185,7 +185,7 @@ class _Hospital3State extends State<Hospital3> {
                            ),
       InkWell(
                      onTap:(){
-                         Get.to(() => Hospital2());
+                         Get.to(() => Hospital2DocProfile());
                 
                       },      
                 child: 
@@ -204,7 +204,7 @@ class _Hospital3State extends State<Hospital3> {
                         ),
               InkWell(
                      onTap:(){
-                         Get.to(() => Hospital2());
+                         Get.to(() => Hospital2DocProfile());
                 
                       },      
                 child: 

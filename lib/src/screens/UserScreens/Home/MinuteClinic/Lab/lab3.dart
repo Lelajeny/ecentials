@@ -1,4 +1,4 @@
-// ignore_for_file: unused_import, camel_case_types, prefer_const_constructors, prefer_const_literals_to_create_immutables, duplicate_ignore, avoid_print, unnecessary_import, unused_label
+// ignore_for_file: unused_import, camel_case_types, prefer_const_constructors, prefer_const_literals_to_create_immutables, duplicate_ignore, avoid_print, unnecessary_import, unused_label, duplicate_import
 
 import 'dart:ui';
 
@@ -13,7 +13,8 @@ import 'package:ecentialsclone/src/Widgets/prominentDoctors.dart';
 import 'package:ecentialsclone/src/Widgets/search.dart';
 
 import 'package:ecentialsclone/src/Widgets/topDoctor.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/Hospital2.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/Hospital2DocProfile.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/Hospital2DocProfile.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/Hospital3.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/Hospital4Chat.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/lab3.dart';
@@ -286,7 +287,7 @@ class _lab3State extends State<lab3> {
                 children: [
                   InkWell(
                     onTap: () {
-                      Get.to(() => Hospital2());
+                      Get.to(() => Hospital2DocProfile());
                     },
                     child: ProminentDoctors(
                         image: "assets/images/doctor1.png",
@@ -297,7 +298,7 @@ class _lab3State extends State<lab3> {
                     margin: EdgeInsets.only(left: 25.97, top: 0),
                     child: InkWell(
                       onTap: () {
-                        Get.to(() => Hospital2());
+                        Get.to(() => Hospital2DocProfile());
                       },
                       child: ProminentDoctors(
                           image: "assets/images/doctor2.png",
@@ -309,7 +310,7 @@ class _lab3State extends State<lab3> {
                     margin: EdgeInsets.only(left: 25.05, top: 0),
                     child: InkWell(
                       onTap: () {
-                        Get.to(() => Hospital2());
+                        Get.to(() => Hospital2DocProfile());
                       },
                       child: ProminentDoctors(
                           image: "assets/images/doctor.png",
