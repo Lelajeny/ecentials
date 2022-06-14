@@ -15,6 +15,7 @@ import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmac
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/cart.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/drugDashboard.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/FindPharmacy.dart';
 import 'package:get/get.dart';
 import 'package:ecentialsclone/src/Widgets/searchForh.dart';
 
@@ -190,12 +191,21 @@ class _pharmacyDashboardState extends State<pharmacyDashboard> {
                             SizedBox(
                               height: 20,
                             ),
-                            Button(
-                              text: "Find",
-                              height: 30,
-                              width: 100,
-                              style:
-                                  TextStyle(color: AppColors.primaryWhiteColor),
+                            Builder(
+                              builder: (context) {
+                                 
+                                return Button(
+                                   onTap: () {
+                               Get.to(() => FindPharmacy());
+                                   },
+                                 
+                                  text: "Find",
+                                  height: 30,
+                                  width: 100,
+                                  style:
+                                      TextStyle(color: AppColors.primaryWhiteColor),
+                                );
+                              }
                             ),
                           ],
                         ),
