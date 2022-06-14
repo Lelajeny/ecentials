@@ -62,7 +62,9 @@ class _PasswordResetState extends State<PasswordReset> {
           alignment: Alignment.centerLeft,
           child: Text(
             "New Password",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            style: TextStyle(
+              fontSize: 16,
+            ),
           ),
         ),
         const SizedBox(
@@ -118,7 +120,9 @@ class _PasswordResetState extends State<PasswordReset> {
           alignment: Alignment.centerLeft,
           child: Text(
             "Confirm Password",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            style: TextStyle(
+              fontSize: 16,
+            ),
           ),
         ),
         const SizedBox(
@@ -178,7 +182,7 @@ class _PasswordResetState extends State<PasswordReset> {
       },
       child: Button(
         onTap: () {
-          Get.to(() => EmailSuccess());
+          Get.to(() => Login());
         },
         text: "Save",
         style: TextStyle(color: AppColors.primaryWhiteColor, fontSize: 20),
@@ -192,7 +196,9 @@ class _PasswordResetState extends State<PasswordReset> {
       elevation: 0,
       title: Text(
         "Password Reset",
-        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        style: TextStyle(
+          fontSize: 20,
+        ),
       ),
     );
 

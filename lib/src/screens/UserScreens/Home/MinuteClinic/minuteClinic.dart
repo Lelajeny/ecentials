@@ -1,34 +1,41 @@
-// ignore_for_file: file_names, prefer_const_constructors, unused_import, duplicate_impor, duplicate_ignore
+// ignore_for_file: file_names, prefer_const_constructors, unused_import, duplicate_impor, duplicate_ignore, duplicate_import
 // ignore_for_file: file_names, prefer_const_constructors, unused_import
 
 import 'package:ecentialsclone/src/Themes/colors.dart';
-import 'package:ecentialsclone/src/Widgets/dashboard.dart';
+import 'package:ecentialsclone/src/Widgets/Dashboard.dart';
 import 'package:ecentialsclone/src/Widgets/bottomNavBar.dart';
 import 'package:ecentialsclone/src/Widgets/floatingAmbulance.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Chat/chat.dart';
 import 'package:ecentialsclone/src/Widgets/searchForh.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/HospitalScreens/screen2.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/Hospital2DocProfile.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/Hospital3.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/Hospital4Chat.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/lab1.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/lab3.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/EmptyCart.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/Order_completed.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/Order_processed.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/Order_submitted.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/PharmacyDashboard2.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/pharmacy5.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/LabDirection.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/doctorInformation.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/labSchedules.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/labChat.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/alllabs.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/labDetails.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/cart.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/FindPharmacy.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/orderCompleted.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/orderProcessed.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/orderSubmitted.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/drugDashboard.dart';
+
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/pharmacyDashboard.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/EmptyCart.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/pharmacyDashboard3.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/pharmacyDashboard4.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/cart.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/scanResults.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/uploadResults.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/scanDocument.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/homeScreen.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/ambulance_map.dart';
+
 import 'package:ecentialsclone/src/screens/UserScreens/Notifications/notifications.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Store/store.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/route_manager.dart';
+
+import 'HospitalScreens/nearbyHospital.dart';
 
 class MinuteClinic extends StatefulWidget {
   const MinuteClinic({Key? key}) : super(key: key);
@@ -55,7 +62,8 @@ class _MinuteClinicState extends State<MinuteClinic> {
           );
         },
       ),
-      title: Row(
+      title: Wrap(
+        crossAxisAlignment: WrapCrossAlignment.center,
         children: [
           Container(
             margin: EdgeInsets.only(bottom: 12, right: 10),
@@ -70,7 +78,7 @@ class _MinuteClinicState extends State<MinuteClinic> {
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
-          )
+          ),
         ],
       ),
     );
@@ -90,35 +98,30 @@ class _MinuteClinicState extends State<MinuteClinic> {
     ];
     // screens
     final _pages = [
-      lab1(),
-      lab1(),
-      lab3(),
-      lab3(),
-      Hospital3(),
+      Alllabs(),
+      LabDetails(),
+      LabSchedules(),
       pharmacyDashboard(),
       pharmacyDashboard(),
-      pharmacyDashboard4(),
-      pharmacyDashboard4(),
-      Order_processed(),
-      Order_processed(),
-      Order_submitted(),
-      Order_completed(),
-      pharmacyDashboard3(),
-      pharmacyDashboard3(),
-      pharmacyDashboard2(),
-      pharmacyDashboard2(),
-      Order_completed(),
-      Order_completed(),
-      lab1(),
-      lab1(),
-      pharmacy5(),
-      pharmacy5(),
       Hospital2DocProfile(),
       Hospital2DocProfile(),
-      EmptyCart(),
-      EmptyCart(),
-      Hospital4Chat(),
+      ScanDocument(),
+      OrderProcessed(),
+      OrderSubmitted(),
+      OrderCompleted(),
+      UploadResults(),
+      ScanResults(),
+      OrderCompleted(),
+      Alllabs(),
       
+      FindPharmacy(),
+      DoctorInformation(),
+      Cart(),
+      LabChat(),
+      LabDirection(),
+      DoctorInformation(),
+      NearbyHospital(),
+
     ];
 
     return Scaffold(
@@ -133,12 +136,32 @@ class _MinuteClinicState extends State<MinuteClinic> {
         children: List.generate(
           3,
           (index) => DashBoard(
-            onTap: () {
-              Get.to(() => _pages[index]);
-            },
-            image: _images[index],
-            btnName: _btnNames[index],
-          ),
+              image: _images[index],
+              btnName: _btnNames[index],
+              //  if(index == 0){
+              onTap: () {
+                if (index == 0) {
+                  Get.to(
+                    () => const NearbyHospital(),
+                    transition: Transition.fadeIn,
+                    duration: Duration(seconds: 1),
+                  );
+                } else if (index == 1) {
+                  Get.to(
+                    () => const pharmacyDashboard(),
+                    transition: Transition.fadeIn,
+                    duration: Duration(seconds: 1),
+                  );
+                } else {
+                  Get.to(
+                    () => const Alllabs(),
+                    transition: Transition.fadeIn,
+                    duration: Duration(seconds: 1),
+                  );
+                }
+
+                // }
+              }),
         ),
       ),
     );
