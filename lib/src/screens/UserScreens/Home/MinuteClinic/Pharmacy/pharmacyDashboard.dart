@@ -11,6 +11,7 @@ import 'package:ecentialsclone/src/Widgets/pharmacyCard.dart';
 import 'package:ecentialsclone/src/Widgets/schedulesCard.dart';
 import 'package:ecentialsclone/src/Widgets/search.dart';
 import 'package:ecentialsclone/src/Widgets/topDoctor.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/UploadPrescription.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/cart.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/cart.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/drugDashboard.dart';
@@ -160,12 +161,19 @@ class _pharmacyDashboardState extends State<pharmacyDashboard> {
                             SizedBox(
                               height: 20,
                             ),
-                            Button(
-                              text: "Upload",
-                              height: 30,
-                              width: 100,
-                              style:
-                                  TextStyle(color: AppColors.primaryWhiteColor),
+                            Builder(
+                              builder: (context) {
+                                return Button(
+                                   onTap: () {
+                               Get.to(() => UploadPrescription());
+                                   },
+                                  text: "Upload",
+                                  height: 30,
+                                  width: 100,
+                                  style:
+                                      TextStyle(color: AppColors.primaryWhiteColor),
+                                );
+                              }
                             )
                           ],
                         ),
