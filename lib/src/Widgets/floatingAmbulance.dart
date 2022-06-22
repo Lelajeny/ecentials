@@ -1,7 +1,6 @@
 import 'package:ecentialsclone/src/screens/UserScreens/Home/Ambulance/ambulanceNear.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 class FloatingAmbulance extends StatelessWidget {
   const FloatingAmbulance({Key? key, }) : super(key: key);
 
@@ -12,8 +11,8 @@ class FloatingAmbulance extends StatelessWidget {
         Get.to(() => AmbulanceNear());
       },
       child: Container(
-        height: 50,
-        width: 50,
+        height: 45,
+        width: 45,
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/nav_ambulance.png"),

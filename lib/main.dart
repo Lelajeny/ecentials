@@ -1,7 +1,12 @@
 // ignore_for_file: prefer_const_constructors, unused_import, unused_local_variable
 
+import 'package:ecentialsclone/src/Themes/colors.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/Settings/language_setting.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Store/ecentialsWallet.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:ecentialsclone/src/screens/AuthScreens/login.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Chat/chatroom/chat_bubble.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/delivery_mode.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/Ambulance/ambulance_map.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/HospitalScreens/labScreen.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/HospitalScreens/docotorInfo.dart';
@@ -11,6 +16,7 @@ import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/lab
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/alllabs.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/doctorInformation.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/labDetails.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/lab_homepage.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/mapScreen.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/orderCompleted.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/cart.dart';
@@ -22,7 +28,11 @@ import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmac
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/uploadResults.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/scanResults.dart';
 import 'package:ecentialsclone/src/app_state/MainState.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/Payments/Payed.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/Payments/paymentMethod.dart';
 import 'package:ecentialsclone/src/screens/onboardingScreen.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Chat/chat.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Chat/chatroom/chatroom.dart';
 import 'package:provider/provider.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/Ambulance/ambulanceDirection.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/Ambulance/ambulanceNear.dart';
@@ -34,8 +44,6 @@ import 'package:ecentialsclone/src/screens/UserScreens/Home/Profiles/profileScre
 import 'package:ecentialsclone/src/screens/UserScreens/Home/Settings/setting.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Notifications/notifications.dart';
 import 'package:flutter/services.dart';
-
-import 'package:ecentialsclone/src/screens/AuthScreens/login.dart';
 
 import 'package:ecentialsclone/src/screens/UserScreens/main_screen.dart';
 import 'package:flutter/material.dart';
@@ -72,8 +80,11 @@ Future main() async {
         ChangeNotifierProvider<PharmacyState>(create: (_) => PharmacyState()),
         ChangeNotifierProvider<ShopState>(create: (_) => ShopState()),
       ],
-      child: const GetMaterialApp(
-        home: Schedule(),
+      child:  MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: ChatRoom(),
+        // home: ChatRoom(color: AppColors.primaryDeepColor),
+        // home: TestWidgetsScreen(),
       ),
     ),
   );
@@ -94,12 +105,12 @@ class MyApp extends StatelessWidget {
     ]);
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AnimatedSplashScreen(
+      home: AnimatedSplashScreen(        
         splash: "assets/images/logo.png",
         centered: true,
         duration: 2000,
         splashIconSize: 500,
-        nextScreen: AmbulanceNear(),
+        nextScreen: DeliveryMode(),
         // nextScreen: showLogin ? Login() : const OnboardingScreen(),
       ),
       theme: ThemeData(
