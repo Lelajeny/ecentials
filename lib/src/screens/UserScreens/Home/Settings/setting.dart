@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:ecentialsclone/src/Themes/colors.dart';
 import 'package:ecentialsclone/src/Themes/ecentials_icons_icons.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/Profiles/editProfile.dart';
@@ -25,6 +27,7 @@ class _SettingsState extends State<Settings> {
           onTap: () {
             Navigator.pop(context);
           },
+          // ignore: prefer_const_constructors
           child: Icon(
             Icons.arrow_back_sharp,
             color: Colors.black54,

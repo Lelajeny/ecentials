@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, duplicate_ignore, prefer_const_literals_to_create_immutables, unused_import
+
 import 'package:ecentialsclone/src/screens/UserScreens/Chat/chatMessageModel.dart';
 import 'package:ecentialsclone/src/Themes/colors.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +31,7 @@ class Chat extends StatelessWidget {
                   ),
                   Text(
                     "Online -Last seen, 2:02pm",
+                    // ignore: prefer_const_constructors
                     style: TextStyle(fontSize: 12, color: Colors.black),
                   ),
                 ],
