@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_import
+
 import 'package:ecentialsclone/src/Widgets/floatingAmbulance.dart';
 import 'package:flutter/material.dart';
 import 'package:ecentialsclone/src/Widgets/bottomNavBar.dart';
