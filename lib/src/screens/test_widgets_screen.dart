@@ -34,7 +34,6 @@ import 'package:ecentialsclone/src/Widgets/schoolsAttendedCard.dart';
 import 'package:ecentialsclone/src/Widgets/storeList.dart';
 import 'package:ecentialsclone/src/screens/AuthScreens/agreement.dart';
 import 'package:ecentialsclone/src/screens/AuthScreens/registration.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Chat/chat.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/HospitalScreens/Hospital4Chat.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/homeScreen.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Store/createPin.dart';
@@ -43,12 +42,12 @@ import 'package:ecentialsclone/src/screens/UserScreens/Store/MyStoreHome2.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Store/PinCreated.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Store/PinVerfication.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Store/setUpEcentialsWallet.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Store/addCard.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Store/addCardDetails.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Store/cardTopup.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/Wallet/addCard.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/Wallet/cardTopup.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Store/add_product.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/pin_creation_prompt.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Store/shopDashboard.dart';
-import 'package:ecentialsclone/src/screens/UserScreens/Store/topupSuccessful.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/Wallet/topupSuccessful.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Store/ecentialsWallet.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Store/store.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Lab/labDetails.dart';
@@ -69,20 +68,21 @@ class _TestWidgetsScreenState extends State<TestWidgetsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // body: Mystore3(),
-        //  NearbyH(),
-        // /addingProduct(),
-        //  DocotorInfo(),
-        //  Schedule(),
+      body: pinCreationPrompt(),
+      // body: Mystore3(),
+      //  NearbyH(),
+      // /addingProduct(),
+      //  DocotorInfo(),
+      //  Schedule(),
 
-        //  DocotorInfo(),
-        //  cardDetails(),
-        // walletSet(),
-        //  topedup(),
-        //  walletSet(),
-        // addingProduct(),
-        // SetupWallet(),
-        //  PageView(children: [],),
-        );
+      //  DocotorInfo(),
+      //  cardDetails(),
+      // walletSet(),
+      //  topedup(),
+      //  walletSet(),
+      // addingProduct(),
+      // SetupWallet(),
+      // labScreen()
+    );
   }
 }
