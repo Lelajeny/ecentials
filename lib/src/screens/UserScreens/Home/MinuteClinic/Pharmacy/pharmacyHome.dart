@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:ecentialsclone/src/Themes/colors.dart';
 import 'package:ecentialsclone/src/Widgets/CurvedBottomBar.dart';
+import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/FindDrug.dart';
 import 'package:ecentialsclone/src/screens/UserScreens/Home/MinuteClinic/Pharmacy/pharmacyDashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -105,7 +108,9 @@ class _PharmacyHomeState extends State<PharmacyHome> {
         foregroundColor: AppColors.primaryBlackColor,
         elevation: 0,
         title: Search4(
-          searchPressed: () {},
+          searchPressed: () {
+            Get.to(() => FindDrug()); 
+          },
           micPressed: () {},
           width: MediaQuery.of(context).size.width,
           text: "Enter your search term here ",

@@ -45,12 +45,12 @@ class _Pharmacy3State extends State<Pharmacy3> {
         height: MediaQuery.of(context).size.height,
         child: Stack(
           children: [
-            const Positioned(
+           const  Positioned(
               top: 0,
               left: 0,
               bottom: 0,
               right: 0,
-              child: mapScreen(),
+              child: MapScreen(),
             ),
             Positioned(
               child: Container(

@@ -1,11 +1,15 @@
+// ignore_for_file: unnecessary_import
+
 import 'dart:convert';
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:ecentialsclone/src/BASEURL/BASEURL.dart';
+
 import 'package:ecentialsclone/src/Widgets/EcentialsToast.dart';
 import 'package:ecentialsclone/src/screens/AuthScreens/login.dart';
 import 'package:flutter/material.dart';
+//import 'package:get/get_connect/http/src/response/response.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../screens/UserScreens/main_screen.dart';
@@ -32,7 +36,7 @@ class AuthState extends ChangeNotifier {
     String path = APPBASEURL.BASEURL + "/api/v1/user/register";
 
     try {
-      Response response = await dio.post(path, data:data);          
+      Response response = await dio.post(path, data: data);
       if (response.statusCode == 200) {
         _registerLoaderState = 2;
         notifyListeners();

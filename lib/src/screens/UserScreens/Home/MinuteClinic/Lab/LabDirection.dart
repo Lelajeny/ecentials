@@ -48,7 +48,7 @@ class _LabDirectionState extends State<LabDirection> {
               left: 0,
               bottom: 0,
               right: 0,
-              child: mapScreen(),
+              child: MapScreen(),
             ),
             Positioned(
               child: Container(
