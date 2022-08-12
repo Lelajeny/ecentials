@@ -73,20 +73,18 @@ class _PharmacyDashboardState extends State<PharmacyDashboard> {
                             SizedBox(
                               height: 20,
                             ),
-                            Builder(
-                              builder: (context) {
-                                return Button(
-                                   onTap: () {
-                               Get.to(() => UploadPrescription());
-                                   },
-                                  text: "Upload",
-                                  height: 30,
-                                  width: 100,
-                                  style:
-                                      TextStyle(color: AppColors.primaryWhiteColor),
-                                );
-                              }
-                            )
+                            Builder(builder: (context) {
+                              return Button(
+                                onTap: () {
+                                  Get.to(() => UploadPrescription());
+                                },
+                                text: "Upload",
+                                height: 30,
+                                width: 100,
+                                style: TextStyle(
+                                    color: AppColors.primaryWhiteColor),
+                              );
+                            })
                           ],
                         ),
                       ),
@@ -108,22 +106,18 @@ class _PharmacyDashboardState extends State<PharmacyDashboard> {
                             SizedBox(
                               height: 20,
                             ),
-                            Builder(
-                              builder: (context) {
-                                 
-                                return Button(
-                                   onTap: () {
-                               Get.to(() => FindPharmacy());
-                                   },
-                                 
-                                  text: "Find",
-                                  height: 30,
-                                  width: 100,
-                                  style:
-                                      TextStyle(color: AppColors.primaryWhiteColor),
-                                );
-                              }
-                            ),
+                            Builder(builder: (context) {
+                              return Button(
+                                onTap: () {
+                                  Get.to(() => FindPharmacy());
+                                },
+                                text: "Find",
+                                height: 30,
+                                width: 100,
+                                style: TextStyle(
+                                    color: AppColors.primaryWhiteColor),
+                              );
+                            }),
                           ],
                         ),
                       ),
